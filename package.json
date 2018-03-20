@@ -1,6 +1,6 @@
 {
   "name": "@haztivity/hz-cardflip",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Recurso de contenido que simular cartas",
   "main": "index.js",
   "module": "index.js",
