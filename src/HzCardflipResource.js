@@ -26,7 +26,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  */
 var core_1 = require("@haztivity/core");
 require("./jquery.flip");
-var HzCardflipResource = HzCardflipResource_1 = (function (_super) {
+var HzCardflipResource = /** @class */ (function (_super) {
     __extends(HzCardflipResource, _super);
     /**
      * Recurso de tooltip para Haztivity.
@@ -40,6 +40,7 @@ var HzCardflipResource = HzCardflipResource_1 = (function (_super) {
         _this._DataOptions = _DataOptions;
         return _this;
     }
+    HzCardflipResource_1 = HzCardflipResource;
     HzCardflipResource.prototype.init = function (options, config) {
         this._config = config;
         this._id = new Date().getTime();
@@ -86,20 +87,20 @@ var HzCardflipResource = HzCardflipResource_1 = (function (_super) {
         }
         _super.prototype.destroy.call(this);
     };
+    HzCardflipResource.DEFAULTS = {};
+    HzCardflipResource.NAMESPACE = "hzCardflip";
+    HzCardflipResource = HzCardflipResource_1 = __decorate([
+        core_1.Resource({
+            name: "HzCardflip",
+            dependencies: [
+                core_1.$,
+                core_1.EventEmitterFactory,
+                core_1.DataOptions
+            ]
+        })
+    ], HzCardflipResource);
     return HzCardflipResource;
+    var HzCardflipResource_1;
 }(core_1.ResourceController));
-HzCardflipResource.DEFAULTS = {};
-HzCardflipResource.NAMESPACE = "hzCardflip";
-HzCardflipResource = HzCardflipResource_1 = __decorate([
-    core_1.Resource({
-        name: "HzCardflip",
-        dependencies: [
-            core_1.$,
-            core_1.EventEmitterFactory,
-            core_1.DataOptions
-        ]
-    })
-], HzCardflipResource);
 exports.HzCardflipResource = HzCardflipResource;
-var HzCardflipResource_1;
 //# sourceMappingURL=HzCardflipResource.js.map
